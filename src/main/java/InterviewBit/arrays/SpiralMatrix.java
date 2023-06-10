@@ -64,6 +64,7 @@ public class SpiralMatrix {
         public StockPrice() {
             stock = new HashMap<>();
             tmp = new TreeMap<>();
+
             current_timestamp = 0;
             minHeap = new PriorityQueue<Integer>();
             minHeap.poll();
@@ -71,6 +72,7 @@ public class SpiralMatrix {
         }
 
         public void update(int timestamp, int price) {
+            Stack st = new Stack();
             Integer oldPrice = stock.put(timestamp, price);
             if (oldPrice != null) {
                 minHeap.remove(price);
