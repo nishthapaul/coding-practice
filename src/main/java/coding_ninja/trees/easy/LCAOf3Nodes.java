@@ -86,3 +86,10 @@ public class LCAOf3Nodes {
         }
     }
 }
+
+/* Time complexity of O(N square)
+checkLCA - O(N) - BFS on every node
+lcaOfThreeNodesHelper - recursively on every node
+and it internally calls checkLCA on every node
+so N*N = N square
+ */
